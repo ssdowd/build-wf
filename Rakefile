@@ -28,7 +28,7 @@ ENV['JENKINS_URL'] = ENV['JENKINS_URL'] || "http://localhost:#{ENV['JENKINS_PORT
 
 desc "install jenkins war"
 task :war do
-  url = "#{mirror}/war-stable/1.580.3/jenkins.war"
+  url = "#{mirror}/war-stable/latest/jenkins.war"
   puts "Downloading jenkins war: #{url}"
   File.open("jenkins.war", "wb") do |war_file|
     open(url, 'rb') do |read_file|
